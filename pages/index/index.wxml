@@ -1,3 +1,7 @@
 <!--pages/index/index.wxml-->
 <text class="title">Hello World</text>
 <button size="mini">click</button>
+
+
+<view>01_知识点一</view>
+<view>01_知识点一</view>
