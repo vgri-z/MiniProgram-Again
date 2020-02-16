@@ -1,3 +1,6 @@
 {
-  "usingComponents": {}
+  "usingComponents": {},
+  "navigationBarTitleText": "商品列表",
+  "enablePullDownRefresh": true,
+  "navigationBarBackgroundColor": "#f40"
 }

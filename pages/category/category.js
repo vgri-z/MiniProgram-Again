@@ -1,16 +1,11 @@
-// pages/about/about.js
+// pages/category/category.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    content: "哈哈哈"
-  },
-  handleSwitchContent() {
-    this.setData({
-      content: "呵呵呵"
-    })
+
   },
 
   /**

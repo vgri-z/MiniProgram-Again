@@ -1,2 +1,6 @@
 <!--pages/about/about.wxml-->
-<text>pages/about/about.wxml</text>
+<text>about content</text>
+<view>我是分类界面</view>
+
+<button size="mini" bind:tap="handleSwitchContent">click</button>
+<view>{{content}}</view>
