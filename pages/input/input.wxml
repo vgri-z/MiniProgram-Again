@@ -1,0 +1,23 @@
+<!--pages/input/input.wxml-->
+<!-- 1. input的基本使用 -->
+<input/>
+
+<!-- 2. value: input中的默认值 -->
+<input value="默认值"></input>
+
+<!-- 3. type: 决定键盘类型(文本输入键盘/数字/身份证) -->
+<!-- <input type="number"></input>
+<input type="text"></input>
+<input type="idcard"></input>
+<input type="digit"></input> -->
+
+<!-- 4. password: 暗文 -->
+<input password="{{true}}"></input>
+
+<!-- 5. placehoder: 占位文字 -->
+<input placeholder="请输入账号"></input>
+
+<!-- 6. input绑定事件 -->
+<input bindinput="handleInput"
+       bindfocus="handleFocus"
+       bindblur="handleBlur"></input>

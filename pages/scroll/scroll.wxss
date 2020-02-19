@@ -1,0 +1,25 @@
+/* pages/scroll/scroll.wxss */
+.container1 {
+  background: lime;
+  white-space: nowrap;
+}
+
+.item1 {
+  width: 100px;
+  height: 100px;
+  background: #0ff;
+  display: inline-block;
+  margin: 10px 10px;
+}
+
+.container2 {
+  margin-top: 10px;
+  height: 200px;
+  background: lime;
+}
+
+.item2 {
+  height: 100px;
+  background: #0ff;
+  margin: 10px 10px;
+}

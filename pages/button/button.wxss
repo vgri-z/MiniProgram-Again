@@ -1,0 +1,4 @@
+/* pages/button/button.wxss */
+.btn {
+  background: #0ff;
+}

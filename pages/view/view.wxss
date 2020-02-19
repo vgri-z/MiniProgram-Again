@@ -1,0 +1,29 @@
+/* pages/view/view.wxss */
+.box {
+  color: #f00;
+}
+
+.box1 {
+  width: 100px;
+  height: 100px;
+  background: lime;
+}
+
+.hover-box1 {
+  width: 100px;
+  height: 100px;
+  background: #0ff;
+}
+
+.box2 {
+  margin-top: 10px;
+  width: 200px;
+  height: 200px;
+  background: yellow;
+}
+
+.hover-box2 {
+  width: 200px;
+  height: 200px;
+  background: lightblue;
+}

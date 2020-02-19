@@ -1,0 +1,45 @@
+<!--pages/button/button.wxml-->
+<!-- 1.button的基本上使用 block -->
+<view>
+  <button>click</button>
+</view>
+
+<!-- 2. size: mini/default -->
+<view>
+  <button size="mini">click</button>
+</view>
+
+<!-- 3. type: primary/default/warn -->
+<view>
+  <button size="mini" type="primary">click</button>
+  <button size="mini" type="default">click</button>
+  <button size="mini" type="warn">click</button>
+</view>
+
+<!-- 4. plain: 背景透明 -->
+<view>
+  <button size="mini" plain>click</button>
+</view>
+
+<!-- 5. disable: true 不可以和用户进行交互 -->
+<view>
+  <button size="mini" disabled="{{true}}">click</button>
+</view>
+
+<!-- 6. loading -->
+<view>
+  <button size="mini" loading="{{true}}">click</button>
+</view>
+
+<!-- 7. hover-class -->
+<view>
+  <button size="mini" hover-class="btn">click</button>
+</view>
+
+<!-- 8. open-type -->
+<view>
+  <button size="mini" open-type="contact" bindcontact="handleContact">客服会话</button>
+  <button size="mini" open-type="share">分享</button>
+  <button size="mini" open-type="getUserInfo" bindgetuserinfo="handleGetUserInfo">获取用户信息</button>
+  <button size="mini" open-type="getPhoneNumber" bindgetphonenumber="handleGetPhoneNumber">获取电话</button>
+</view>
