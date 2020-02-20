@@ -1,3 +1,8 @@
 <!--pages/index/index.wxml-->
+
+<include src="/wxml/header.wxml"/>
+
 <text class="title">Hello World</text>
 <button size="mini">click</button>
+
+<include src="/wxml/footer.wxml"/>

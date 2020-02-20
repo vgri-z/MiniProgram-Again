@@ -1,0 +1,4 @@
+.btn {
+  background: #0ff;
+  width: 100px;
+}

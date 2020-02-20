@@ -1,0 +1,49 @@
+<!-- 1. 设置样式的三种方式 -->
+<!-- 1.1 行内(内联)样式 (key:value) -->
+<view style="color: red;font-size: 20px;">你好，小程序</view>
+
+<!-- 1.2 页内样式 -->
+<view class="box">你好，李银河</view>
+
+<!-- 1.3 全局样式 -->
+<view class="container">你好，朱必全</view>
+
+<!-- 1.4 三种样式作用于同一个组件(按权重排) -->
+<view style="color: orange; background: #008c8c;" class="content">你好，vuejs</view>
+
+<!-- 2. wxss中的单位：rpx -->
+<view class="box1"></view>
+<view class="box2"></view>
+
+<view class="content1">哈哈哈</view>
+<view class="content2">呵呵呵</view>
+
+<button class="btn">click</button>
+
+<!-- 3.1 使用官方的样式库开发一个搜索框 -->
+<view class="page__bd">
+  <view class="weui-search-bar">
+    <view class="weui-search-bar__form">
+      <view class="weui-search-bar__box">
+        <icon class="weui-icon-search_in-box" type="search" size="14"></icon>
+        <input type="text" class="weui-search-bar__input" placeholder="搜索" value="{{inputVal}}" focus="{{inputShowed}}" bindinput="inputTyping" />
+        <view class="weui-icon-clear" wx:if="{{inputVal.length > 0}}" bindtap="clearInput">
+          <icon type="clear" size="14"></icon>
+        </view>
+      </view>
+      <label class="weui-search-bar__label" hidden="{{inputShowed}}" bindtap="showInput">
+        <icon class="weui-icon-search" type="search" size="14"></icon>
+        <view class="weui-search-bar__text">搜索</view>
+      </label>
+    </view>
+    <view class="weui-search-bar__cancel-btn" hidden="{{!inputShowed}}" bindtap="hideInput">取消</view>
+  </view>
+</view>
+
+<!-- 3.2 使用官方的样式库开发一个Toast -->
+<view class="page__bd">
+  <view class="weui-btn-area">
+    <button class="weui-btn" type="default" bindtap="openToast">成功提示</button>
+    <button class="weui-btn" type="default" bindtap="openLoading">加载中提示</button>
+  </view>
+</view>
