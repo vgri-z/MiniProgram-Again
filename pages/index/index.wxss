@@ -3,3 +3,53 @@
   color: red;
   font-size: 30px;
 }
+
+.box {
+  width: 200rpx;
+  height: 200rpx;
+  background: #0ff;
+}
+
+.outer {
+  width: 400rpx;
+  height: 400rpx;
+  background: lime;
+}
+
+.inner {
+  width: 200rpx;
+  height: 200rpx;
+  background: #0ff;
+}
+
+.container {
+  display: flex;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+}
+
+.item {
+  flex: 1;
+}
+
+.content1 {
+  width: 600rpx;
+  height: 600rpx;
+  background: #008c8c;
+  color: #fff;
+}
+
+.content2 {
+  width: 400rpx;
+  height: 400rpx;
+  background: lime;
+  color: #fff;
+}
+
+.content3 {
+  width: 200rpx;
+  height: 200rpx;
+  background: #0ff;
+  color: #fff;
+}
