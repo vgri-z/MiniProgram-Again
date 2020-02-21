@@ -1,3 +1,56 @@
 <!--pages/index/index.wxml-->
 <text class="title">Hello World</text>
 <button size="mini">click</button>
+
+<!-- 1. 自定义组价的基本使用 -->
+<!-- <my-cpn></my-cpn>
+<my-cpn></my-cpn>
+<my-cpn/> -->
+
+<!-- 2. 自定义组件的样式细节 -->
+<!-- <my-style/> -->
+
+<!-- 3. 自定义组件传递数据/样式 -->
+<my-props title="哈哈哈" titleclass="title1" />
+<my-props title="呵呵呵" titleclass="title2" />
+<my-props titleclass="title3" />
+
+<!-- 4. 组件内部发出事件 -->
+<view>当前计数: {{counter}}</view>
+<my-event bind:Increment="handleAddOne" />
+
+<!-- 5.tab-control的练习 -->
+<w-tab-control titles="{{titles}}" bind:tabClick="handleTabClick" />
+
+<!-- 6.直接选中组件修改数据/调用方法 -->
+<button size="mini" bind:tap="handleDataInCpn">修改组件内的数据</button>
+<my-sel class="mySel" id="my-sel" />
+
+<!-- 7. 插槽的使用 -->
+<!-- 7.1 单个插槽的使用 -->
+<my-slot>
+  <button size="mini">我是插入的按钮</button>
+</my-slot>
+
+<my-slot>
+  <slider value="90"></slider>
+</my-slot>
+
+<!-- <my-slot>
+  <image src="https://dss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=4214941395,707510718&fm=26&gp=0.jpg" mode="widthFixed"></image>
+</my-slot> -->
+
+<!-- 7.2 多插槽的使用 -->
+<!-- 
+  注意事项:
+    1.给每一个插槽起一个名字: name属性
+    2.必须在Component对象中添加一个选项: options -> multipleSlots: true
+ -->
+<button size='mini' bind:tap="handleChangeShow">切换显示</button>
+<block wx:if="{{isShow}}">
+  <my-mslot>
+    <button size='mini' slot="slot2">我是插入的按钮</button>
+    <slider slot="slot1"/>
+    <text slot="slot3">哈哈哈哈</text>
+  </my-mslot>
+</block>

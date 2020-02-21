@@ -3,3 +3,18 @@
   color: red;
   font-size: 30px;
 }
+
+.title1 {
+  color: red;
+  font-weight: 700;
+}
+
+.title2 {
+  color: lime;
+  font-weight: 700;
+}
+
+.title3 {
+  color: blueviolet;
+  font-weight: 700;
+}

@@ -1,0 +1,2 @@
+<!--components/cpn1/cpn1.wxml-->
+<view class="text">我是cpn1组件的内容</view>
