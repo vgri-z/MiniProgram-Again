@@ -1,66 +1,68 @@
 // pages/index/index.js
 Page({
-
-  /**
-   * 页面的初始数据
-   */
   data: {
 
   },
-
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
-
+  handleShowToast() {
+    wx.showToast({
+      title: 'loading',
+      icon: "loading",
+      duration: 3000,
+      mask: true,
+      success: () => {
+        console.log("展示弹窗成功")
+      },
+      fail: () => {
+        console.log("展示弹窗失败")
+      },
+      complete: () => {
+        console.log("弹窗展示完成")
+      }
+    })
   },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-
+  handleShowModal() {
+    wx.showModal({
+      title: '提示',
+      content: '这是一个模拟对话框',
+      cancelText: "退出",
+      cancelColor: "red",
+      success: (res) => {
+        console.log(res)
+        if(res.cancel) {
+          console.log("用户点击了取消按钮")
+        } else if (!res.cancel) {
+          console.log("用户点击了确认按钮")
+        }
+      }
+    })
   },
+  handleShowLoading() {
+    wx.showLoading({
+      title: '加载中ing',
+      mask: true
+    })
 
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-
+    setTimeout(() => {
+      wx.hideLoading()
+    }, 2000)
   },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
+  handleShowActionShee() {
+    wx.showActionSheet({
+      itemList: ["拍照", "图片"],
+      itemColor: "#0ff",
+      success(res) {
+        console.log(res.tapIndex)
+      },
+      fail(res) {
+        console.log(res.errMsg)
+      }
+    })
   },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
+  onShareAppMessage(options) {
+    return {
+      title: "hello world",
+      path: "/pages/about/about",
+      imageUrl: "https://pics6.baidu.com/feed/8c1001e93901213fc69b3c362c1f76d72d2e95aa.jpeg?token=4285353bee7ff00f188e70f89b339ae0&s=DBB606C6DDC80F453651D03603000041"
+    }
   }
 })
